@@ -1,0 +1,208 @@
+.nav {
+  display: flex;
+  padding: 5rem;
+  justify-content: space-between;
+  height: 7rem;
+  align-items: center;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    list-style: none;
+    margin-left: 5rem;
+  }
+  &__link {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+//header
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+
+  &__heading {
+    font-family: "Raleway", sans-serif;
+    color: #fff;
+    margin-top: 2rem;
+  }
+
+  &__paragraph {
+    margin-top: 3rem;
+    color: #fff;
+    line-height: 2.5rem;
+    font-size: 1.3rem;
+  }
+
+  &__startedBtn {
+    margin-top: 3rem;
+    background-image: linear-gradient(to right, $color-cyan, $color-blue);
+    padding: 1.5rem 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4rem;
+  }
+
+  &__startedLink {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+//main
+
+.main {
+  transform: translateY(-15rem);
+  .curve {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    transform: scale(1.4);
+    z-index: -2;
+  }
+  &__container {
+    background-color: $color-dark-blue-2;
+    position: relative;
+    height: 100%;
+
+    .productive {
+      display: flex;
+      padding: 0 10rem;
+      padding-bottom: 10rem;
+      height: 100%;
+      align-items: center;
+
+      &__content {
+        margin-left: 10rem;
+      }
+
+      &__heading {
+        color: #fff;
+        font-size: 3rem;
+        font-family: "Raleway", sans-serif;
+      }
+      &__paragraph {
+        font-family: "Open Sans", sans-serif;
+        color: #fff;
+        padding-right: 15rem;
+        padding-top: 3rem;
+      }
+
+      &__btn {
+        margin-top: 3rem;
+      }
+
+      &__link {
+        text-decoration: none;
+        color: $color-cyan;
+        display: inline-block;
+        border: none;
+        border-bottom: 1px solid $color-cyan;
+        padding-bottom: 0.8rem;
+      }
+    }
+
+    .testimonials {
+      display: flex;
+      padding: 3rem 20rem;
+      padding-bottom: 10rem;
+      &__box {
+        background-color: $color-dark-blue-4;
+        padding: 3rem;
+        position: relative;
+        border-radius: 4px;
+        &:not(:first-child) {
+          margin-left: 3rem;
+        }
+        &:first-child::before {
+          content: url("../images/bg-quotes.png");
+          position: absolute;
+          //   z-index: -7878;
+          top: -3rem;
+          left: -2rem;
+        }
+      }
+
+      &__review {
+        color: #ddd;
+        line-height: 2rem;
+      }
+
+      &__user {
+        display: flex;
+        margin-top: 2rem;
+        // height: 100%;
+        align-items: center;
+      }
+
+      &__image {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+        background-size: cover;
+      }
+      &__details {
+        margin-left: 1rem;
+        color: #bbb;
+        font-size: 1.2rem;
+      }
+      &__name {
+        color: #fff;
+        font-weight: 700;
+      }
+    }
+  }
+  &__info__container {
+    display: flex;
+    padding: 0 20rem 15rem 20rem;
+    text-align: center;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: -10rem;
+
+    &-box {
+      flex-basis: 45%;
+      &:not(:nth-child(2n)) {
+        margin-right: 3rem;
+      }
+    }
+    &__heading {
+      color: #fff;
+      margin-top: 2rem;
+    }
+    p {
+      color: #fff;
+      padding: 7rem;
+      padding-top: 3rem;
+    }
+  }
+}
+
+//footer
+
+.footer {
+  background-color: $color-dark-blue-3;
+  transform: translateY(-45rem);
+  position: relative;
+  width: 100%;
+  padding: 30rem;
+  margin-top: 30rem;
+  .subscription {
+    background-color: $color-dark-blue-1;
+    padding: 3rem 5rem;
+    width: 50%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
